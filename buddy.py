@@ -46,8 +46,8 @@ def wishMe():
 
     elif hour >= 16 or hour < 6:
         speak("Good Evening ")
-    print("I am Jarvis, Please tell me how may i help you")
-    speak("I am Jarvis, Please tell me how may i help you")
+    print("I am JOJO, Please tell me how may i help you")
+    speak("I am JOJO, Please tell me how may i help you")
 
 def currenttime():
     time = datetime.now()
@@ -82,7 +82,7 @@ def youtube(query):
 
 def chatgpt(query):
     client = OpenAI()
-    query = query.replace("Jarvis","")
+    query = query.replace("JOJO","")
     completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
@@ -131,12 +131,12 @@ def note():
     topic = takecommand()
     pyautogui.typewrite(topic)
     
-def Jarvis():
+def JOJO():
     while True:
         query = takecommand().lower()
         
         if query:
-            query = query.replace("Jarvis",'')
+            query = query.replace("JOJO",'')
 
             if 'play' in query:
                 youtube(query)
@@ -153,8 +153,8 @@ def Jarvis():
 
 
             elif 'yourself' in query:
-                print("I'm an artificial intelligence developed by Lakshay called Jarvis. My purpose is to assist and engage in conversation with users like you.")
-                speak("I'm an artificial intelligence developed by Lakshay called Jarvis. My purpose is to assist and engage in conversation with users like you.")
+                print("I'm an artificial intelligence developed by Lakshay called JOJO. My purpose is to assist and engage in conversation with users like you.")
+                speak("I'm an artificial intelligence developed by Lakshay called JOJO. My purpose is to assist and engage in conversation with users like you.")
 
             elif 'open whatsapp' in query or 'open the whatsapp' in query:
                 open("whatsapp")
@@ -211,7 +211,7 @@ def Jarvis():
 
 if __name__ == "__main__":
     wishMe()
-    Jarvis()
+    JOJO()
 
 
     
